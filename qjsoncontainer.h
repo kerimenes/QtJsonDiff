@@ -28,6 +28,13 @@
 #include <QSsl>
 #include <zlib.h>
 
+inline void swap(QJsonValueRef v1, QJsonValueRef v2)
+{
+	QJsonValue temp(v1);
+	v1 = QJsonValue(v2);
+	v2 = temp;
+}
+
 class QJsonContainer : public QWidget
 {
 Q_OBJECT

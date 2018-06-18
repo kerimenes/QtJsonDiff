@@ -42,6 +42,7 @@ public:
     QPushButton *compare_pushbutton;
     void expandIt();
     QCheckBox *syncScroll_checkbox;
+	QCheckBox *extractModeEnable;
 
     void compareModels(QJsonModel *modelLeft, const QModelIndex &parentLeft, QJsonModel *modelRight);
     int findIndexInModel(QJsonModel *modelLeft, QJsonTreeItem *itemLeft, QModelIndex idxLeft, QJsonModel *modelRight, const QModelIndex &parentRight);
@@ -51,6 +52,9 @@ public:
     void startComparison();
     void setBrowseVisible(bool state);
 
+	void saveExtractFile(const QString &filename, const QJsonObject &obj);
+	QJsonObject fileObj;
+	void openJson(const QString &filename);
 signals:
 
 public slots:

@@ -49,3 +49,4 @@ DISTFILES +=
 
 RESOURCES += \
     qjsontreeview.qrc
+CONFIG += c++11
